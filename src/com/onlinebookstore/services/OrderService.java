@@ -22,7 +22,6 @@ public class OrderService {
         order.setId(nextId++);
         orders.add(order);
         orderQueue.enqueue(order);
-        // System.out.println("Order placed for " + order.getCustomerName());
     }
 
     public CustomArrayList<Order> getAllOrders() {
@@ -76,7 +75,6 @@ public class OrderService {
         if (!orderQueue.isEmpty()) {
             return orderQueue.dequeue();
         } else {
-            System.out.println("No orders to process.");
             return null;
         }
     }
